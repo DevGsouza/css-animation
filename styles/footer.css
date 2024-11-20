@@ -1,0 +1,40 @@
+footer {
+  padding-block: 1.5rem 3rem;
+  
+  display: grid;
+  gap: 3rem;
+}
+
+footer p {
+  font: var(--font-h2);
+  
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+}
+
+footer ul {
+  font: var(--font-span);
+  display: grid;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.social-media {
+  display: flex;
+}
+
+@media (width >= 80rem) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer ul {
+    font: var(--font-span);
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+}

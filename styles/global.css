@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+body {
+  font-family: var(--font-montserrat);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+
+:root {
+
+  /*Variável de fontes*/
+
+  --font-syne: 'Syne', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+
+  --font-h1: 700 2rem/125% var(--font-syne);
+  --font-h2: 700 1.5rem/120% var(--font-syne);
+
+  --font-button: 600 1rem/150% var(--font-montserrat);
+  --font-span: 600 1rem/150% var(--font-montserrat);
+
+  /*Variáveis de Cores*/
+
+  --text-color: #000000;
+  --bg-color: #fafafa;
+} 
+
+.container {
+  margin-inline: auto;
+  width: 100%;
+  padding-inline: 1.5rem;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.patins-bar {
+  background: linear-gradient(90deg, #F472B6 0%, #67E8F9 100%);
+  padding-block: 1rem;
+  margin-block: 1.5rem;
+
+  display: flex;
+  gap: 1.5rem;
+  font: bold 1.25rem/120% var(--font-syne);
+}
+
+.patins-bar img {
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+@media (width >= 80rem) {
+
+  :root {
+    --font-h1: 700 4rem/125% var(--font-syne);
+    --font-h2: 700 2.5rem/120% var(--font-syne);
+  
+    --font-span: 500 .875rem/150% var(--font-montserrat);
+  }
+
+  .container {
+    max-width: 76rem;
+    padding-inline: 2rem;
+  }
+
+  .desktop-only {
+    display: inline;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}
