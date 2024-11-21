@@ -7,6 +7,11 @@ header {
 
 header img:nth-child(1) {
   width: 2rem;
+  transition: rotate 350ms;
+}
+
+header img:nth-child(1):hover {
+  rotate: 90deg;
 }
 
 header img:nth-child(2) {

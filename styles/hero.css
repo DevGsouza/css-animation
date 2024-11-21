@@ -2,10 +2,75 @@
  padding-block: 1rem 3rem;
 }
 
-.hero > img {
-  width: 20rem;
+/* animations e estilos imagem do patins*/
+.patins {
+  width: 19.5rem;
+  height: 19.5rem;
+  position: relative;
+  margin-bottom: 2rem;
+  overflow: hidden;
+
+  & > img[src*="Ellipse"] {
+    width: 100%;
+    padding: 1rem;
+
+    transform: translateX(800%);
+    animation: patins 1.5s 200ms ease both;
+  }
+
+  & > img[src*="patins"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+
+    transform: translateX(400%);
+    animation: patins 1.5s 400ms ease both;
+  }
+
+  & > img[src*="Stars 1"] {
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    background-color: transparent;
+    width: 3.5rem;
+
+    opacity: 0;
+    transform: translateX(450%);
+    animation: patins 1.5s 600ms ease both, appear 150ms 600ms ease both;
+  }
+
+  & > img[src*="Stars 2"] {
+    background-color: transparent;
+    position: absolute;
+    bottom: 6rem;
+    right: .4rem;
+    width: 1.5rem;
+
+    transform: translateX(800%);
+    animation: patins 1.5s 600ms ease both;
+  }
 }
 
+@keyframes patins {
+  50% {
+    transform: translateX(-.63rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* animations e estilos h1*/
 .hero-infos h1 {
   font: var(--font-h1);
   font-weight: 700;
@@ -15,7 +80,7 @@
   width: 4.5rem;
   height: 4.5rem;
   
-  background-color: #fff;;
+  background-color: transparent;
   box-shadow: 0px 36px 15px rgba(0, 0, 0, 0.01), 0px 20px 12px rgba(0, 0, 0, 0.05), 0px 9px 9px rgba(0, 0, 0, 0.09), 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   
@@ -29,16 +94,21 @@
   transition: all .1s ease;
 }
 
-.image-play img:hover {
-  width: 1.7rem;
-}
-
 .buy-now > div {
   margin-block: 3rem 1.5rem;
 
   display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.see-action {
+  display: flex;
   align-items: center;
   gap: .75rem;
+  margin-right: 5.5rem;
+  transition: scale 350ms;
 }
 
 .buy-now > div span,
@@ -59,11 +129,18 @@ button {
   align-items: center;
   gap: .75rem;
   height: fit-content;
+
+  transition: scale 350ms;
 }
 
 button img {
   background: #FFCD1E;
   width: 1.5rem;
+}
+
+button:hover,
+.see-action:hover {
+  scale: 1.1;
 }
 
 h1 div {
@@ -97,8 +174,6 @@ h1 strong {
 
   animation: animationStrong 6s ease infinite;
 }
-
-/* animations */
 
 @keyframes animationStrong {
   0%, 22% {
@@ -176,19 +251,14 @@ h1 strong {
   }
 
   .hero > img {
-    max-width: 30.5rem;
-    aspect-ratio: 1 / 1;
-  }
-
-  .buy-now {
-    display: flex;
-    align-items: flex-end;
-    gap: 2rem;
-    margin-top: 2.5rem;
+    width: 30.5rem;
   }
 
   .buy-now > div {
-    margin-block: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 3rem;
   }
 
   h1 {
@@ -196,11 +266,7 @@ h1 strong {
   }
 
   h1 div {
-    display: inline-block;
-    overflow: hidden;
     height: 5rem;
-    width: min-content;
-    vertical-align: top;
   }
 
   @keyframes animationStrong {
@@ -266,6 +332,67 @@ h1 strong {
   
     100% {
       transform: translateY(-15rem);
+    }
+  }
+
+  /* animation desktop patins */
+  .patins {
+    width: 30.5rem;
+    height: 30.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+  
+    & > img[src*="Ellipse"] {
+      width: 100%;
+      padding: .5rem;
+  
+      transform: translateX(400%);
+      animation: patins 1.5s 200ms ease both;
+    }
+  
+    & > img[src*="patins"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      z-index: 1;
+  
+      transform: translateX(400%);
+      animation: patins 2s 400ms ease both;
+    }
+  
+    & > img[src*="Stars 1"] {
+      position: absolute;
+      top: 6rem;
+      left: 1.1rem;
+      background-color: transparent;
+      width: 5.5rem;
+  
+      opacity: 0;
+      transform: translateX(450%);
+      animation: patins 2s 600ms ease both, appear 400ms 700ms ease both;
+    }
+  
+    & > img[src*="Stars 2"] {
+      background-color: transparent;
+      position: absolute;
+      bottom: 12.5rem;
+      right: 0;
+      width: 2.5rem;
+  
+      transform: translateX(2000%);
+      animation: patins 2s 600ms ease both;
+    }
+  }
+  
+  @keyframes patins {
+    50% {
+      transform: translateX(-.56rem);
+    }
+  
+    100% {
+      transform: translateX(0);
     }
   }
 } 

@@ -16,7 +16,6 @@ body {
   background-color: var(--bg-color);
 }
 
-
 :root {
 
   /*Variável de fontes*/
@@ -38,26 +37,12 @@ body {
 
 .container {
   margin-inline: auto;
-  width: 100%;
+  width: 22.5rem;
   padding-inline: 1.5rem;
 }
 
 .desktop-only {
   display: none;
-}
-
-.patins-bar {
-  background: linear-gradient(90deg, #F472B6 0%, #67E8F9 100%);
-  padding-block: 1rem;
-  margin-block: 1.5rem;
-
-  display: flex;
-  gap: 1.5rem;
-  font: bold 1.25rem/120% var(--font-syne);
-}
-
-.patins-bar img {
-  background-color: transparent;
 }
 
 a {
@@ -75,7 +60,7 @@ a {
   }
 
   .container {
-    max-width: 76rem;
+    width: 76rem;
     padding-inline: 2rem;
   }
 
